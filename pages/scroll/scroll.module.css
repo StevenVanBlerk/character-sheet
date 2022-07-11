@@ -1,0 +1,37 @@
+.main {
+  background-image: url('/scroll.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.content {
+  text-align: center;
+  margin: auto;
+}
+.questionOne,
+.questionTwo,
+.questionThree,
+.questionFour {
+  font-size: 15px;
+  font-family: Harlow Solid;
+}
+
+.yes,
+.no {
+  font-size: 20px;
+}
+
+.nextPage {
+  width: 58vw;
+  border: none;
+  background-color: transparent;
+  float: right;
+  cursor: pointer;
+  margin-top: 50px;
+  font-family: Harlow Solid;
+  font-size: 18px;
+}

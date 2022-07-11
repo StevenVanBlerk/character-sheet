@@ -1,22 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import scroll from "../images/Scroll.png";
 
 export default function Home() {
-
-  function choicesMatter(){
-    
-    let questionOne = document.querySelector(".questionOne");
-    let yes = document.querySelector(".yes");
-    let no = document.querySelector(".no");
-
-    if(!yes && !no){
-      alert("An option or options are missing!")
-    }
-    
-  }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -25,55 +10,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className={styles.scrollContainer}>
-          <Image alt="Scroll Image" src={scroll} />
-
-          <div className={styles.content}>
-            <div className={styles.questionOne}>
-              <h1>Does your Character Use Magic?</h1>
-              <form action="#" method="post" className={styles.pageOne}>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.yes}>Yes</label>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.no}>No</label>
-              </form>
-            </div>
-
-            <div className={styles.questionTwo}>
-              <h1>Does your character focus on alignment?</h1>
-              <form action="#" method="post" className={styles.pageOne}>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.yes}>Yes</label>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.no}>No</label>
-              </form>
-            </div>
-
-            <div className={styles.questionThree}>
-              <h1>Does your character form relationships?</h1>
-              <form action="#" method="post" className={styles.pageOne}>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.yes}>Yes</label>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.no}>No</label>
-              </form>
-            </div>
-
-            <div className={styles.questionFour}>
-              <h1>Does your character have a back story?</h1>
-              <form action="#" method="post" className={styles.pageOne}>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.yes}>Yes</label>
-                <input type="radio" className={styles.choices} />
-                <label className={styles.no}>No</label>
-
-                <button className={styles.nextPage}>Next Page</button>
-              </form>
-            </div>
-          </div>
-        </div>
-        
+        <div>home page</div>
+        <div>go to http://localhost:3000/scroll</div>
       </main>
     </div>
-  );
+  )
 }
