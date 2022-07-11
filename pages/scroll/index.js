@@ -4,19 +4,10 @@ import Image from 'next/image'
 import styles from './scroll.module.css'
 
 export default function Home() {
-  function choicesMatter() {
-    let questionOne = document.querySelector('.questionOne')
-    let yes = document.querySelector('.yes')
-    let no = document.querySelector('.no')
-
-    if (!yes && !no) {
-      alert('An option or options are missing!')
-    }
-  }
-
-  const [questionOne, setQuestionOne] = useState(false)
-  const [questionTwo, setQuestionTwo] = useState(false)
-  const [questionThree, setQuestionThree] = useState(false)
+  const [questionOne, setQuestionOne] = useState(null)
+  const [questionTwo, setQuestionTwo] = useState(null)
+  const [questionThree, setQuestionThree] = useState(null)
+  const [questionFour, setQuestionFour] = useState(null)
 
   return (
     <div className={styles.container}>
@@ -105,7 +96,21 @@ export default function Home() {
 
           <div className={styles.questionFour}>
             <form action="#" method="post" className={styles.pageOne}>
-              <button className={styles.nextPage}>Next Page</button>
+              <button
+                className={styles.nextPage}
+                onClick={() => {
+                  if (
+                    questionOne == null ||
+                    questionTwo == null ||
+                    questionThree == null ||
+                    questionFour == null
+                  ) {
+                    alert('An option or options are missing!')
+                  }
+                }}
+              >
+                Next Page
+              </button>
             </form>
           </div>
         </div>
